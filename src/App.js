@@ -8,6 +8,7 @@ import CheckOut from './CheckOut/CheckOut';
 import NotFound from './NotFound/NotFound';
 import Login from './Page/Login/Login/Login';
 import Register from './Page/Register/Register';
+import RequireAuth from './Page/Login/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -16,11 +17,16 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}> </Route>
         <Route path='/home' element={<Home></Home>}> </Route>
-        <Route path='/service/:serviceId' element={<CheckOut></CheckOut>}></Route>
+        <Route path='/service/:serviceId' element={
+          <RequireAuth>
+            <CheckOut></CheckOut>
+          </RequireAuth>
+        }></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/about' element={<About></About>}> </Route>
         <Route path='/register' element={<Register></Register>}></Route>
+
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
