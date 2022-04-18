@@ -3,15 +3,16 @@ import './Service.css';
 const Service = ({ service }) => {
     const { name, img, description, price } = service
     return (
-        <div className='service'>
-            <img className='service-image' src={img}></img>
-            <div className='service-info'>
-                <h3> {name}</h3>
-                <p>Price:{price}</p>
-                <p>{description}</p>
-                <button>Book:{name}</button>
+        <div className='g-4 col-sm-12 col-md-6 col-lg-3 '>
+            <div className="card">
+                <img src={img} className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">{name}</h5>
+                    <p>Price:{price}</p>
+                    <p>{description}</p>
+                    <a href="#" className="btn btn-primary">Book:{name}</a>
+                </div>
             </div>
-
         </div>
     );
 };
