@@ -7,6 +7,7 @@ import Blog from './Page/Blog/Blog';
 import CheckOut from './CheckOut/CheckOut';
 import NotFound from './NotFound/NotFound';
 import Login from './Page/Login/Login/Login';
+import Register from './Page/Register/Register';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/about' element={<About></About>}> </Route>
+        <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

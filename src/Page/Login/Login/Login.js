@@ -1,9 +1,11 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
+    const navigate = useNavigate('')
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -11,6 +13,10 @@ const Login = () => {
         const passowrd = passwordRef.current.value;
 
         console.log(email, passowrd)
+    }
+
+    const navigateRegister = event => {
+        navigate('/register');
     }
 
     return (
@@ -34,6 +40,7 @@ const Login = () => {
                     Submit
                 </Button>
             </Form>
+            <p>New To Denti care? <Link to='/register' className='text-primary text-decoration-none' onClick={navigateRegister}>Please Register. </Link> </p>
         </div>
     );
 };
