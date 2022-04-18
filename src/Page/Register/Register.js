@@ -1,52 +1,110 @@
 import React from 'react';
-import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import './Register.css'
+import { Link, useNavigate } from 'react-router-dom';
+import './Register.css';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init'
+
 
 const Register = () => {
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
+
+    const navigate = useNavigate();
+    const navigateLogin = () => {
+        navigate('/login')
+    }
+
     const handleRegister = event => {
         event.preventDefault();
-        console.log(event.target)
+        const name = event.target.name.value
+        const email = event.target.email.value
+        const password = event.target.password.value
+        createUserWithEmailAndPassword(email, password)
     }
+
+    if (user) {
+        navigate('/home')
+    }
+
+
     return (
-        <div>
-            <h3 className='text-center'>Please register</h3>
-            <div className='container mx-auto w-50'>
-                <h3 className='text-primary text-center mt-2'></h3>
-                <Form onClick={handleRegister}>
-                    <Form.Group className="mb-3" controlId="name">
-                        <Form.Label>Your Name</Form.Label>
-                        <Form.Control type="name" placeholder="Your Name" required />
+        <div className='register-form'>
+            <h2 className='text-center'>Please register</h2>
+            <form onSubmit={handleRegister}>
+                <input type="text" name="name" placeholder='Your Name' id="" /> <br />
 
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email" placeholder="Enter email" required />
-                        <Form.Text className="text-muted">
-                            We'll never share your email with anyone else.
-                        </Form.Text>
-                    </Form.Group>
+                <input type="email" name="email" id="" placeholder='email Address' required />
+                <br />
+                <input type="password" name="password" placeholder='password' id="" required />
+                <input
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password" required />
-                    </Form.Group>
+                    className='  mx-auto mt-2' type="submit" value="Register" />
 
-                    <Button variant="primary" type="submit">
-                        Register
-                    </Button>
-                </Form>
-                <p>Already have an acocunt?<Link to='/login' className='text-primary text-decoration-none'>Please Login. </Link> </p>
-            </div>
+
+
+
+            </form>
+            <p>Already have an account? <Link to='/login' className='text-primary text-decoration-none' onClick={navigateLogin} >Please Login</Link></p>
         </div>
     );
 };
 
 export default Register;
 
-// <from>
-//                 <input type="text" name='name' id='' placeholder='Your Name' required />
-//                 <br />
-//                 <input type='email' name='name' id='' placeholder='Email Address' required />
-//                 <input type='passowrd' name='passowrd' id='' placeholder='Passowrd' value='Register' />
-//             </from>
+//
+
+
+
+
+
+// const [
+//     createUserWithEmailAndPassword,
+//     user,
+//     loading,
+//     error,
+// ] = useCreateUserWithEmailAndPassword(auth);
+
+// const namelRef = useRef('')
+// const emailRef = useRef('')
+// const passowrdRef = useRef('')
+// const navigate = useNavigate('')
+
+// const handleRegister = event => {
+//     event.preventDefault();
+//     const name = namelRef.current.value;
+//     const email = emailRef.current.value;
+//     const password = passowrdRef.current.value;
+//     createUserWithEmailAndPassword(name, email, password)
+// }
+
+// <div className='container mx-auto w-50'>
+//                 <h3 className='text-primary text-center mt-2'></h3>
+//                 <Form onSubmit={handleRegister}>
+//                     <Form.Group className="mb-3" controlId="name" >
+//                         <Form.Label>Your Name</Form.Label>
+//                         <Form.Control ref={namelRef} type="name" placeholder="Your Name" name='name' required />
+
+//                     </Form.Group>
+//                     <Form.Group className="mb-3" controlId="formBasicEmail">
+//                         <Form.Label>Email address</Form.Label>
+//                         <Form.Control ref={emailRef} type="email" placeholder="Enter email" name='email' required />
+//                         <Form.Text className="text-muted">
+//                             We'll never share your email with anyone else.
+//                         </Form.Text>
+//                     </Form.Group>
+
+//                     <Form.Group className="mb-3" controlId="formBasicPassword">
+//                         <Form.Label>Password</Form.Label>
+//                         <Form.Control ref={passowrdRef} type="password" placeholder="Password" name='passowrd' required />
+//                     </Form.Group>
+
+//                     <Button variant="primary" type="submit">
+//                         Register
+//                     </Button>
+//                 </Form>
+//                 <p>Already have an acocunt?<Link to='/login' className='text-primary text-decoration-none'>Please Login. </Link> </p>
+//             </div>
