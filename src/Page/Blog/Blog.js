@@ -1,10 +1,11 @@
 import React from 'react';
+import './Blog.css'
 
 const Blog = () => {
     return (
-        <div className='container'>
-            <h2>Difference between authorise and authentication,  </h2>
-            <h4>Authentication </h4>
+        <div className='container mt-5 mb-5 blog-text'>
+            <h2 className='second-caption'>Difference between authorise and authentication.  </h2>
+            <h4 className='first-caption'>Authentication </h4>
             <ul>
                 <li>Authentication identifies users. </li>
                 <li>It works through password, user information.
@@ -13,7 +14,7 @@ const Blog = () => {
                 <li>Authentication is visible and changeable by the user. </li>
             </ul>
 
-            <h4>Authorization </h4>
+            <h4 className='first-caption'>Authorization </h4>
             <ul>
                 <li>Aurions means which resource can be used.
                 </li>
@@ -25,14 +26,14 @@ const Blog = () => {
             </ul>
 
             <br />
-            <h3>Why are we using firebase authentication? What  other options do you have to implement authentication?
+            <h3 className='second-caption' >Why are we using firebase authentication? What  other options do you have to implement authentication?
             </h3>
             <p>Firebase Authentication provides backend services and provides ready made libraries. It supports using password, phone numbers, Google,Facebook and twitter and more.It provides authentication UI.
             </p> <br />
             <p>There are lots of authentication systems without using firebase. Such as, Stytch, ory , Supabase, Okta , Ping Identity,KeycLoak, Frontegg, AUthress, AuthO , Amazon Cognito ,OneLogin
             </p>
 
-            <h2>What other service does firebase provide other than authentication ?
+            <h2 className='second-caption'>What other service does firebase provide other than authentication ?
             </h2>
             <p>Firebase provides Authentication UI. It has a ready made Library so that users can implement this service easily. </p>
             <p>There are many service firebase provide: </p>
