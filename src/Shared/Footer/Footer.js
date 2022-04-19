@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div>
             <footer>
-                <small>copyright @{year}</small>
+                <small className='text-center'>copyright @{year}</small>
             </footer>
         </div>
     );
