@@ -43,9 +43,9 @@ const Register = () => {
 
 
     return (
-        <div className='register-form'>
-            <h2 className='text-center'>Please register</h2>
-            <form onSubmit={handleRegister}>
+        <div className='register-form '>
+            <h2 className='text-center second-caption'>Please register</h2>
+            <form className='w-50 mx-auto' onSubmit={handleRegister}>
                 <input type="text" name="name" placeholder='Your Name' id="" /> <br />
 
                 <input type="email" name="email" id="" placeholder='email Address' required />
@@ -53,10 +53,10 @@ const Register = () => {
                 <input type="password" name="password" placeholder='password' id="" required />
                 <input
 
-                    className='  mx-auto mt-2' type="submit" value="Register" />
+                    className=' button-color mx-auto mt-2 w-50' type="submit" value="Register" />
             </form>
-            <p>Already have an account? <Link to='/login' className='text-primary text-decoration-none' onClick={navigateLogin} >Please Login</Link></p>
-            <SocialLogin></SocialLogin>
+            <p className='text-center '>Already have an account? <Link to='/login' className='text-center text-decoration-none second-caption' onClick={navigateLogin} >Please Login</Link></p>
+            <div className='mx-auto w-50'><SocialLogin></SocialLogin></div>
         </div>
     );
 };

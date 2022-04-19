@@ -30,12 +30,12 @@ const SocialLogin = () => {
         <div>
             <div></div>
             or
-            <div> <button
+            <div className='mx-auto'> <button
                 onClick={() => signInWithGoogle()}
-                className='btn btn-link text-decoration-none'>Sign in with Google</button>
-                <button
+                className=' button-color  '>Sign in with Google</button>
+                <br /><button
                     onClick={() => signInWithGithub()}
-                    className='btn btn-link text-decoration-none'>Sign in with Github</button>
+                    className='mt-3   mb-3 button-color'>Sign in with Github</button>
             </div>
             {errorElement}
         </div>

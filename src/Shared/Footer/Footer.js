@@ -8,7 +8,7 @@ const Footer = () => {
             <footer className='footer-bg'>
                 <div className=" container">
                     <div className="row">
-                        <div className=' col-lg-4 col-md-4 col-12'>
+                        <div className='mt-5 col-lg-4 col-md-4 col-12'>
                             <h4 className='second-caption'>DentCare</h4>
                             <p>A team of dentists working to ensure you receive the best treatment.</p>
                             <p>Phone: 415-205-5550</p>
@@ -20,7 +20,7 @@ const Footer = () => {
 
                         </div>
                         <div className=' col-lg-4 col-md-4 col-12'>
-                            <h3 className='second-caption mt-3'>About</h3>
+                            <h3 className='second-caption mt-5'>About</h3>
                             <p>Our Dental Team</p>
                             <p>Pricing Nad Pricelist</p>
                             <p>Solution</p>
@@ -28,7 +28,7 @@ const Footer = () => {
                             <p>Clients</p>
                         </div>
                         <div className=' col-lg-4 col-md-4 col-12'>
-                            <h3 className='second-caption mt-3'>Socail Networks</h3>
+                            <h3 className='second-caption mt-5'>Socail Networks</h3>
                             <p>Visit DentiCare on these social links and connect with us. Make sure to follow our accounts for regular updates.</p>
 
                         </div>
