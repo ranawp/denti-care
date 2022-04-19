@@ -1,0 +1,16 @@
+.captions {
+    color: #8A8A8A;
+}
+
+.appoinment-button {
+    background-color: #df3eac;
+    color: white;
+    border: none;
+    height: 2.3rem;
+    border-radius: .4rem;
+    padding: 10px;
+}
+
+.booking-image {
+    height: 33rem;
+}

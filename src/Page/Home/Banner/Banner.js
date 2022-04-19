@@ -22,8 +22,8 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h1 className='text-dark'>Care For Lifetime</h1>
-                        <h4 className='text-dark'>Let us brighteen your Smile.</h4>
+                        <h1 className='first-caption'>Care For Lifetime</h1>
+                        <h2 className='second-caption'>Let us brighteen your Smile.</h2>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -34,8 +34,8 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h1 className='text-dark'>Committed To Excellence</h1>
-                        <h4 className='text-dark'>Personalized and Comfortable</h4>
+                        <h1 className='first-caption'>Committed To Excellence</h1>
+                        <h2 className='second-caption'>Personalized and Comfortable</h2>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -46,10 +46,10 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h1 className='text-dark'>Third slide label</h1>
-                        <h4 className='text-dark'>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                        </h4>
+                        <h1 className='first-caption'>Care For Your Smile</h1>
+                        <h2 className='second-caption'>
+                            Committed To Excellence.
+                        </h2>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

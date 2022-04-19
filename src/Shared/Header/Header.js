@@ -4,7 +4,8 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
-import logo from '../../images/logo.png'
+import logo from '../../images/logo.png';
+import './Header.css'
 
 const Header = () => {
     const [user] = useAuthState(auth)
@@ -18,14 +19,14 @@ const Header = () => {
                 <Container>
                     <Navbar.Brand as={Link} to="/">
                         <div className='d-flex mt-1'>
-                            <img height='30' src={logo} alt="" />
-                            <h4>DentiCare</h4>
+                            <img className='mt-1' height='30' src={logo} alt="" />
+                            <h4 className='logo-color1'> Denti<span className='logo-color2'>Care</span></h4>
                         </div>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link as={Link} to='/service'>Services</Nav.Link>
+                            <Nav.Link href='#services'>Services</Nav.Link>
                             <Nav.Link as={Link} to='/blog'>Blog</Nav.Link>
 
                         </Nav>

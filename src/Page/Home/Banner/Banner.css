@@ -1,4 +1,15 @@
 .banner-image {
     width: 100%;
+    /* filter: brightness(80%); */
+}
+
+.first-caption {
+    color: #df3eac;
+    /* font-weight: 700; */
+}
+
+.second-caption {
+    color: #3388f7;
+    /* font-weight: 700; */
 
 }

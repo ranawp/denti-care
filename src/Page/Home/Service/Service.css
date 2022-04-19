@@ -11,3 +11,13 @@
     width: 400px;
 
 }
+
+.card-body {
+    background-color: #BC74A5;
+    color: white;
+}
+
+.button-color {
+    background-color: #0E54AE;
+    color: white;
+}
