@@ -17,7 +17,7 @@ const Banner = () => {
             <Carousel activeIndex={index} onSelect={handleSelect}>
                 <Carousel.Item>
                     <img
-                        className="d-block banner-image"
+                        className="img-fluid d-block banner-image"
                         src={banner1}
                         alt="First slide"
                     />
@@ -28,7 +28,7 @@ const Banner = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block banner-image"
+                        className="img-fluid d-block banner-image"
                         src={banner2}
                         alt="Second slide"
                     />
@@ -40,13 +40,13 @@ const Banner = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block banner-image"
+                        className="img-fluid d-block banner-image"
                         src={banner3}
                         alt="Third slide"
                     />
 
                     <Carousel.Caption>
-                        <h1 className='first-caption'>Care For Your Smile</h1>
+                        <h1 className=' first-caption'>Care For Your Smile</h1>
                         <h2 className='second-caption'>
                             Committed To Excellence.
                         </h2>
